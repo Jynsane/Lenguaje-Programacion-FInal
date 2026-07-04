@@ -1,0 +1,269 @@
+[
+  {
+    "nombre": "Ana García",
+    "edad": 28,
+    "sintomas": [
+      "fiebre",
+      "dolor_muscular",
+      "fatiga",
+      "escalofrios"
+    ],
+    "enfermedades": [
+      "gripe"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Luis Torres",
+    "edad": 45,
+    "sintomas": [
+      "fiebre",
+      "perdida_de_olfato",
+      "perdida_de_gusto",
+      "fatiga"
+    ],
+    "enfermedades": [
+      "covid19"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Carlos Ruiz",
+    "edad": 55,
+    "sintomas": [
+      "fiebre",
+      "erupcion_cutanea",
+      "dolor_muscular",
+      "dolor_de_cabeza"
+    ],
+    "enfermedades": [
+      "dengue"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Elena Vargas",
+    "edad": 19,
+    "sintomas": [
+      "nauseas",
+      "vomitos",
+      "diarrea",
+      "dolor_abdominal"
+    ],
+    "enfermedades": [
+      "gastroenteritis"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Pedro Salas",
+    "edad": 67,
+    "sintomas": [
+      "fiebre",
+      "dificultad_para_respirar",
+      "dolor_de_pecho",
+      "tos"
+    ],
+    "enfermedades": [
+      "covid19",
+      "neumonia",
+      "asma"
+    ],
+    "esUrgente": true
+  },
+  {
+    "nombre": "María López",
+    "edad": 32,
+    "sintomas": [
+      "tos",
+      "congestion_nasal",
+      "dolor_de_garganta"
+    ],
+    "enfermedades": [
+      "resfriado_comun"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Rosa Mendoza",
+    "edad": 40,
+    "sintomas": [
+      "dolor_de_oido",
+      "fiebre"
+    ],
+    "enfermedades": [
+      "otitis"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Jorge Medina",
+    "edad": 60,
+    "sintomas": [
+      "tos",
+      "dificultad_para_respirar",
+      "fatiga"
+    ],
+    "enfermedades": [
+      "bronquitis",
+      "asma"
+    ],
+    "esUrgente": true
+  },
+  {
+    "nombre": "Lucía Fernández",
+    "edad": 23,
+    "sintomas": [
+      "congestion_nasal",
+      "dolor_facial",
+      "dolor_de_cabeza"
+    ],
+    "enfermedades": [
+      "sinusitis"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Pablo Gómez",
+    "edad": 50,
+    "sintomas": [
+      "dolor_de_cabeza",
+      "nauseas",
+      "vomitos",
+      "mareos"
+    ],
+    "enfermedades": [
+      "migrania"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Sofía Castro",
+    "edad": 27,
+    "sintomas": [
+      "disuria",
+      "fiebre"
+    ],
+    "enfermedades": [
+      "infeccion_urinaria"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Ignacio Peña",
+    "edad": 38,
+    "sintomas": [
+      "erupcion_cutanea",
+      "fiebre",
+      "perdida_de_apetito"
+    ],
+    "enfermedades": [
+      "varicela"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Valeria Ruiz",
+    "edad": 16,
+    "sintomas": [
+      "tos",
+      "fatiga",
+      "fiebre"
+    ],
+    "enfermedades": [
+      
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Diego Navarro",
+    "edad": 72,
+    "sintomas": [
+      "tos",
+      "sudoracion_nocturna",
+      "perdida_de_peso",
+      "fatiga"
+    ],
+    "enfermedades": [
+      "tuberculosis"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Marta Blanco",
+    "edad": 34,
+    "sintomas": [
+      "fiebre",
+      "dolor_muscular",
+      "congestion_nasal"
+    ],
+    "enfermedades": [
+      
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Óscar Vidal",
+    "edad": 48,
+    "sintomas": [
+      "dificultad_para_respirar",
+      "tos"
+    ],
+    "enfermedades": [
+      "asma"
+    ],
+    "esUrgente": true
+  },
+  {
+    "nombre": "Paula Ortiz",
+    "edad": 29,
+    "sintomas": [
+      "nauseas",
+      "vomitos",
+      "dolor_abdominal"
+    ],
+    "enfermedades": [
+      
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Ricardo Fuentes",
+    "edad": 53,
+    "sintomas": [
+      "fiebre",
+      "erupcion_cutanea",
+      "dolor_de_cabeza"
+    ],
+    "enfermedades": [
+      
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Beatriz Cano",
+    "edad": 21,
+    "sintomas": [
+      "dolor_de_oido",
+      "fiebre",
+      "dolor_de_cabeza"
+    ],
+    "enfermedades": [
+      "otitis"
+    ],
+    "esUrgente": false
+  },
+  {
+    "nombre": "Héctor Salazar",
+    "edad": 44,
+    "sintomas": [
+      "perdida_de_olfato",
+      "perdida_de_gusto",
+      "fatiga"
+    ],
+    "enfermedades": [
+      
+    ],
+    "esUrgente": false
+  }
+]

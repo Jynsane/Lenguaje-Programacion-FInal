@@ -1,0 +1,22 @@
+[
+  { "nombre": "Ana García",      "edad": 28, "sintomas": ["fiebre","dolor_muscular","fatiga","escalofrios"] },
+  { "nombre": "Luis Torres",     "edad": 45, "sintomas": ["fiebre","perdida_de_olfato","perdida_de_gusto","fatiga"] },
+  { "nombre": "Carlos Ruiz",    "edad": 55, "sintomas": ["fiebre","erupcion_cutanea","dolor_muscular","dolor_de_cabeza"] },
+  { "nombre": "Elena Vargas",   "edad": 19, "sintomas": ["nauseas","vomitos","diarrea","dolor_abdominal"] },
+  { "nombre": "Pedro Salas",    "edad": 67, "sintomas": ["fiebre","dificultad_para_respirar","dolor_de_pecho","tos"] },
+  { "nombre": "María López",    "edad": 32, "sintomas": ["tos","congestion_nasal","dolor_de_garganta"] },
+  { "nombre": "Rosa Mendoza",   "edad": 40, "sintomas": ["dolor_de_oido","fiebre"] },
+  { "nombre": "Jorge Medina",    "edad": 60, "sintomas": ["tos","dificultad_para_respirar","fatiga"] },
+  { "nombre": "Lucía Fernández","edad": 23, "sintomas": ["congestion_nasal","dolor_facial","dolor_de_cabeza"] },
+  { "nombre": "Pablo Gómez",    "edad": 50, "sintomas": ["dolor_de_cabeza","nauseas","vomitos","mareos"] },
+  { "nombre": "Sofía Castro",   "edad": 27, "sintomas": ["disuria","fiebre"] },
+  { "nombre": "Ignacio Peña",   "edad": 38, "sintomas": ["erupcion_cutanea","fiebre","perdida_de_apetito"] },
+  { "nombre": "Valeria Ruiz",   "edad": 16, "sintomas": ["tos","fatiga","fiebre"] },
+  { "nombre": "Diego Navarro",  "edad": 72, "sintomas": ["tos","sudoracion_nocturna","perdida_de_peso","fatiga"] },
+  { "nombre": "Marta Blanco",   "edad": 34, "sintomas": ["fiebre","dolor_muscular","congestion_nasal"] },
+  { "nombre": "Óscar Vidal",    "edad": 48, "sintomas": ["dificultad_para_respirar","tos"] },
+  { "nombre": "Paula Ortiz",    "edad": 29, "sintomas": ["nauseas","vomitos","dolor_abdominal"] },
+  { "nombre": "Ricardo Fuentes", "edad": 53, "sintomas": ["fiebre","erupcion_cutanea","dolor_de_cabeza"] },
+  { "nombre": "Beatriz Cano",   "edad": 21, "sintomas": ["dolor_de_oido","fiebre","dolor_de_cabeza"] },
+  { "nombre": "Héctor Salazar", "edad": 44, "sintomas": ["perdida_de_olfato","perdida_de_gusto","fatiga"] }
+]

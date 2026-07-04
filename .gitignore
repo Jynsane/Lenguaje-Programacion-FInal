@@ -1,0 +1,29 @@
+# Scala build files
+scala/target/
+scala/project/target/
+scala/project/project/
+.bsp/
+.metals/
+
+# Python cache & virtualenv
+python/__pycache__/
+python/src/__pycache__/
+python/src/utils/__pycache__/
+python/src/integracion/__pycache__/
+.venv/
+venv/
+ENV/
+*.pyc
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db

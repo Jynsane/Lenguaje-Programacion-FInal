@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Ana García",
+    "edad": 28,
+    "sintomas": ["fiebre", "dolor_muscular", "fatiga", "escalofrios"]
+  },
+  {
+    "nombre": "Luis Torres",
+    "edad": 45,
+    "sintomas": ["fiebre", "perdida_de_olfato", "perdida_de_gusto", "fatiga"]
+  },
+  {
+    "nombre": "Carlos Ruiz",
+    "edad": 55,
+    "sintomas": ["fiebre", "erupcion_cutanea", "dolor_muscular", "dolor_de_cabeza"]
+  },
+  {
+    "nombre": "Elena Vargas",
+    "edad": 19,
+    "sintomas": ["nauseas", "vomitos", "diarrea", "dolor_abdominal"]
+  },
+  {
+    "nombre": "Pedro Salas",
+    "edad": 67,
+    "sintomas": ["fiebre", "dificultad_para_respirar", "dolor_de_pecho", "tos"]
+  }
+]
