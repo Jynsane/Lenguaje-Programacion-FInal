@@ -10,8 +10,23 @@ import scala.util.{Try, Success, Failure}
  */
 object ServicioPrologBridge {
 
-  // Ruta relativa al archivo de consultas Prolog (desde la carpeta `scala` al ejecutar con `sbt run`)
-  private val PROLOG_CONSULTAS = "../prolog/consultas.pl"
+  // Ruta dinámica al archivo de consultas Prolog (soporta desarrollo local y producción en Docker)
+  private val PROLOG_CONSULTAS = {
+    val candidatos = Seq(
+      "/app/prolog/consultas.pl",
+      "../prolog/consultas.pl",
+      "prolog/consultas.pl",
+      "../../prolog/consultas.pl",
+      "../../../prolog/consultas.pl"
+    )
+    candidatos.map(new java.io.File(_))
+      .find(_.exists())
+      .map(_.getCanonicalPath)
+      .getOrElse {
+        println("ALERTA: No se pudo determinar dinámicamente consultas.pl. Usando valor predeterminado.")
+        "../prolog/consultas.pl"
+      }
+  }
 
   /**
    * Construye la consulta Prolog para obtener diagnósticos.
