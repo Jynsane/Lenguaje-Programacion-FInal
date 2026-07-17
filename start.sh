@@ -11,10 +11,9 @@ PYTHON_PID=$!
 # Esperar unos segundos a que la API de Python esté lista
 sleep 5
 
-# 2. Iniciar el servidor web de Scala (Cask)
+# 2. Iniciar el servidor web de Scala (Cask) usando el binario precompilado
 echo "Iniciando servidor principal de Scala (Cask)..."
-cd /app/scala
-sbt run
+/app/scala/target/universal/stage/bin/diagnostico-enfermedades
 
 # Al finalizar (si Scala se detiene), matar el proceso de Python
 kill $PYTHON_PID

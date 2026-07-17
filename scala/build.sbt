@@ -8,6 +8,7 @@ ThisBuild / scalaVersion := "3.3.1"
 ThisBuild / organization := "edu.proyecto"
 
 lazy val root = (project in file("."))
+  .enablePlugins(JavaAppPackaging)
   .settings(
     name := "diagnostico-enfermedades",
 

@@ -18,8 +18,8 @@ RUN pip3 install --no-cache-dir -r python/requirements.txt
 # Copiar el resto del proyecto al contenedor
 COPY . .
 
-# Compilar el proyecto de Scala para acelerar el primer arranque
-RUN cd scala && sbt compile
+# Compilar y empaquetar el proyecto de Scala para producción
+RUN cd scala && sbt stage
 
 # Dar permisos de ejecución al script de inicio
 RUN chmod +x start.sh
