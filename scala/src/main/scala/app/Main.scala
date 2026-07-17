@@ -15,8 +15,8 @@ import scala.util.{Try, Success, Failure}
  */
 object Main extends cask.MainRoutes {
 
-  override def port: Int = 8080
-  override def host: String = "localhost"
+  override def port: Int = sys.env.get("PORT").flatMap(_.toIntOption).getOrElse(8080)
+  override def host: String = "0.0.0.0"
 
   val webDirAbsPath = new java.io.File("../web").getCanonicalPath
   println(s"======================================================")

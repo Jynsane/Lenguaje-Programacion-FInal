@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏥 Diagnóstico Neuro-Simbólico</title>
+    <title>Diagnóstico Neuro-Simbólico</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="glow-bg"></div>
     <div class="app-container">
-        
+
         <!-- Header -->
         <header class="app-header">
             <div class="logo">
@@ -36,37 +38,45 @@
 
         <!-- Main Workspace -->
         <main class="app-main">
-            
+
             <!-- Left Panel: Body Map & Manual Selection -->
             <section class="panel glass-panel" id="panel-body">
                 <h2><i class="fa-solid fa-child"></i> Mapa Corporal Interactivo</h2>
                 <p class="section-desc">Haz clic en una zona del cuerpo para filtrar los síntomas asociados.</p>
-                
+
                 <div class="body-map-container">
                     <!-- SVG Human Body Silhouette -->
                     <svg viewBox="0 0 200 480" class="human-body-svg">
                         <!-- Head -->
-                        <path id="part-head" class="body-part" d="M100,20 C115,20 125,32 125,50 C125,65 115,75 100,75 C85,75 75,65 75,50 C75,32 85,20 100,20 Z" />
+                        <path id="part-head" class="body-part"
+                            d="M100,20 C115,20 125,32 125,50 C125,65 115,75 100,75 C85,75 75,65 75,50 C75,32 85,20 100,20 Z" />
                         <!-- Neck -->
                         <path id="part-neck" class="body-part" d="M92,75 L108,75 L106,90 L94,90 Z" />
                         <!-- Chest / Thorax -->
-                        <path id="part-chest" class="body-part" d="M70,92 L130,92 C135,130 135,170 130,190 L70,190 C65,170 65,130 70,92 Z" />
+                        <path id="part-chest" class="body-part"
+                            d="M70,92 L130,92 C135,130 135,170 130,190 L70,190 C65,170 65,130 70,92 Z" />
                         <!-- Abdomen -->
-                        <path id="part-abdomen" class="body-part" d="M72,192 L128,192 C128,215 125,250 120,270 L80,270 C75,250 72,215 72,192 Z" />
+                        <path id="part-abdomen" class="body-part"
+                            d="M72,192 L128,192 C128,215 125,250 120,270 L80,270 C75,250 72,215 72,192 Z" />
                         <!-- Left Arm -->
-                        <path id="part-left-arm" class="body-part" d="M68,95 C55,120 40,160 30,200 C27,210 35,215 40,205 C48,175 60,135 68,115 Z" />
+                        <path id="part-left-arm" class="body-part"
+                            d="M68,95 C55,120 40,160 30,200 C27,210 35,215 40,205 C48,175 60,135 68,115 Z" />
                         <!-- Right Arm -->
-                        <path id="part-right-arm" class="body-part" d="M132,95 C145,120 160,160 170,200 C173,210 165,215 160,205 C152,175 140,135 132,115 Z" />
+                        <path id="part-right-arm" class="body-part"
+                            d="M132,95 C145,120 160,160 170,200 C173,210 165,215 160,205 C152,175 140,135 132,115 Z" />
                         <!-- Pelvis / Urinary -->
                         <path id="part-pelvis" class="body-part" d="M80,272 L120,272 L125,300 L75,300 Z" />
                         <!-- Left Leg -->
-                        <path id="part-left-leg" class="body-part" d="M75,302 L98,302 L95,450 C95,460 85,460 82,450 L70,330 Z" />
+                        <path id="part-left-leg" class="body-part"
+                            d="M75,302 L98,302 L95,450 C95,460 85,460 82,450 L70,330 Z" />
                         <!-- Right Leg -->
-                        <path id="part-right-leg" class="body-part" d="M102,302 L125,302 L130,330 L118,450 C115,460 105,460 105,450 Z" />
+                        <path id="part-right-leg" class="body-part"
+                            d="M102,302 L125,302 L130,330 L118,450 C115,460 105,460 105,450 Z" />
                     </svg>
 
                     <!-- Active Area Label -->
-                    <div class="active-area-label">Zona seleccionada: <span id="selected-area-name">Todo el Cuerpo</span></div>
+                    <div class="active-area-label">Zona seleccionada: <span id="selected-area-name">Todo el
+                            Cuerpo</span></div>
                 </div>
 
                 <!-- Symptoms List Panel -->
@@ -93,13 +103,17 @@
                 <!-- Chat Box Messages -->
                 <div class="chat-messages" id="chat-box">
                     <div class="message assistant animate-fade-in">
-                        ¡Hola! Lamento mucho saber que no te sientes bien. Soy tu asistente médico virtual de MediLogic. Estoy aquí para escucharte y guiarte. Cuéntame con tus propias palabras, ¿qué molestias o síntomas tienes hoy?
+                        ¡Hola! Lamento mucho saber que no te sientes bien. Soy tu asistente médico virtual de MediLogic.
+                        Estoy aquí para escucharte y guiarte. Cuéntame con tus propias palabras, ¿qué molestias o
+                        síntomas tienes hoy?
                     </div>
                 </div>
 
                 <!-- Chat Input area -->
                 <form class="chat-input-area" id="chat-form">
-                    <input type="text" id="chat-input" placeholder="Escribe tus síntomas aquí (ej: tengo fiebre alta y dolor de cabeza)..." autocomplete="off">
+                    <input type="text" id="chat-input"
+                        placeholder="Escribe tus síntomas aquí (ej: tengo fiebre alta y dolor de cabeza)..."
+                        autocomplete="off">
                     <button type="submit" id="chat-submit"><i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </section>
@@ -107,7 +121,7 @@
             <!-- Right Panel: Diagnosis & Consolidation -->
             <section class="panel glass-panel" id="panel-diagnosis">
                 <h2><i class="fa-solid fa-clipboard-list"></i> Diagnóstico Neuro-Simbólico</h2>
-                
+
                 <!-- Patient Info Form -->
                 <div class="patient-form">
                     <div class="form-group">
@@ -122,7 +136,7 @@
 
                 <!-- Live Results -->
                 <div class="results-container">
-                    
+
                     <!-- Symptoms Checked Count -->
                     <div class="symptoms-counter">
                         <span>Síntomas seleccionados:</span>
@@ -162,15 +176,18 @@
 
                 <!-- Actions -->
                 <div class="diagnosis-actions">
-                    <button id="btn-diagnosticar" class="btn btn-primary"><i class="fa-solid fa-stethoscope"></i> Diagnosticar</button>
-                    <button id="btn-pdf" class="btn btn-secondary" disabled><i class="fa-solid fa-file-pdf"></i> Descargar Reporte PDF</button>
+                    <button id="btn-diagnosticar" class="btn btn-primary"><i class="fa-solid fa-stethoscope"></i>
+                        Diagnosticar</button>
+                    <button id="btn-pdf" class="btn btn-secondary" disabled><i class="fa-solid fa-file-pdf"></i>
+                        Descargar Reporte PDF</button>
                 </div>
             </section>
 
         </main>
-        
+
         <footer class="app-footer">
-            <p><strong>Uso Académico:</strong> Este prototipo combina Prolog (IA Simbólica) con Machine Learning (IA Conexionista) para diagnóstico médico asistido. No reemplaza un diagnóstico médico profesional.</p>
+            <p><strong>Uso Académico:</strong> Este prototipo combina Prolog (IA Simbólica) con Machine Learning (IA
+                Conexionista) para diagnóstico médico asistido. No reemplaza un diagnóstico médico profesional.</p>
         </footer>
     </div>
 
@@ -179,4 +196,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
