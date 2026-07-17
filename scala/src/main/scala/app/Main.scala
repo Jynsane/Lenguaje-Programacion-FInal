@@ -15,12 +15,21 @@ import scala.util.{Try, Success, Failure}
  */
 object Main extends cask.MainRoutes {
 
-  override def port: Int = sys.env.get("PORT").flatMap(_.toIntOption).getOrElse(8080)
+  override def port: Int = 8080
   override def host: String = "0.0.0.0"
 
-  val webDirAbsPath = new java.io.File("../web").getCanonicalPath
+  val webDirAbsPath = {
+    val candidatos = Seq("/app/web", "../web", "web", "../../web", "../../../web")
+    candidatos.map(new java.io.File(_))
+      .find(f => f.exists() && f.isDirectory)
+      .map(_.getCanonicalPath)
+      .getOrElse {
+        println("ALERTA: No se pudo determinar dinámicamente la carpeta 'web'. Usando valor predeterminado.")
+        new java.io.File("../web").getCanonicalPath
+      }
+  }
   println(s"======================================================")
-  println(s"--> Ruta de archivos estáticos (web): $webDirAbsPath")
+  println(s"--> Ruta de archivos estáticos detectada: $webDirAbsPath")
   println(s"======================================================")
 
   // 1. Servir archivos estáticos del frontend (carpeta 'web' en la raíz del proyecto)
