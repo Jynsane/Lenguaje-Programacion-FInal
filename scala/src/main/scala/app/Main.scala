@@ -35,7 +35,7 @@ object Main extends cask.MainRoutes {
   // 1. Servir archivos estáticos del frontend de forma robusta y personalizada (evita bugs de rutas en Linux)
   @cask.get("/web", subpath = true)
   def serveWebFiles(request: cask.Request) = {
-    val pathStr = request.remainingPath.mkString("/")
+    val pathStr = request.exchange.getRelativePath.stripPrefix("/web").stripPrefix("/")
     // Si la ruta está vacía (ej: /web/), redirigir o servir index.html
     val targetPath = if (pathStr.trim.isEmpty) "index.html" else pathStr
     val file = new java.io.File(webDirAbsPath, targetPath)
