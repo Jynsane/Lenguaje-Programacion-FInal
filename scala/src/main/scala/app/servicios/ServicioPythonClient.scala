@@ -10,7 +10,7 @@ case class PrediccionML(enfermedad: String, probabilidad: Double)
  */
 object ServicioPythonClient {
 
-  private val PYTHON_API_URL = "http://localhost:8000"
+  private val PYTHON_API_URL = "http://localhost:8081"
 
   /**
    * Envía texto en lenguaje natural a Python para extraer síntomas.

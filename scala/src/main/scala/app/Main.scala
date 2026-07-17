@@ -53,7 +53,7 @@ object Main extends cask.MainRoutes {
     }
 
     val pythonOk = try {
-      val res = requests.get("http://localhost:8000/health", readTimeout = 1000, connectTimeout = 1000)
+      val res = requests.get("http://localhost:8081/health", readTimeout = 1000, connectTimeout = 1000)
       res.statusCode == 200
     } catch {
       case _: Exception => false
@@ -179,7 +179,7 @@ object Main extends cask.MainRoutes {
   def postGenerarPdf(request: cask.Request): cask.Response[Array[Byte]] = {
     Try {
       requests.post(
-        url = "http://localhost:8000/generar-pdf",
+        url = "http://localhost:8081/generar-pdf",
         data = request.text(),
         headers = Map("Content-Type" -> "application/json")
       )

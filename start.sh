@@ -11,7 +11,7 @@ sleep 4
 # 2. Iniciar el microservicio de Python (FastAPI) en segundo plano
 echo "Iniciando microservicio de Python (FastAPI)..."
 cd /app/python
-python3 -m uvicorn src.main:app --host 127.0.0.1 --port 8000 &
+python3 -m uvicorn src.main:app --host 127.0.0.1 --port 8081 &
 PYTHON_PID=$!
 
 # Esperar a que el proceso de Scala finalice
