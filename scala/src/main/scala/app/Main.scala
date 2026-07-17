@@ -52,8 +52,9 @@ object Main extends cask.MainRoutes {
       )
     } else {
       cask.Response(
-        data = s"Archivo no encontrado: $targetPath",
-        statusCode = 404
+        data = s"Archivo no encontrado: $targetPath".getBytes("UTF-8"),
+        statusCode = 404,
+        headers = Seq("Content-Type" -> "text/plain; charset=utf-8")
       )
     }
   }
