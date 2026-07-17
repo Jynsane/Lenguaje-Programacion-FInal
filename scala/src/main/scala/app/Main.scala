@@ -69,6 +69,25 @@ object Main extends cask.MainRoutes {
     )
   }
 
+  // Endpoint de diagnóstico para verificar rutas y archivos en Render
+  @cask.get("/api/test-files")
+  def testFiles() = {
+    val folder = new java.io.File(webDirAbsPath)
+    val exists = folder.exists()
+    val isDir = folder.isDirectory
+    val files = if (exists && isDir) folder.listFiles().map(_.getName).toList else Nil
+    cask.Response(
+      data = ujson.Obj(
+        "webDirAbsPath" -> webDirAbsPath,
+        "exists" -> exists,
+        "isDirectory" -> isDir,
+        "files" -> ujson.Arr(files.map(ujson.Str(_)): _*),
+        "user_dir" -> System.getProperty("user.dir")
+      ).toString(),
+      headers = Seq("Content-Type" -> "application/json")
+    )
+  }
+
   // 2. API: Obtener lista de síntomas válidos del sistema
   @cask.get("/api/sintomas")
   def obtenerSintomas() = {
