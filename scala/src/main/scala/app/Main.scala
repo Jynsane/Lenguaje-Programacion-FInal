@@ -32,9 +32,31 @@ object Main extends cask.MainRoutes {
   println(s"--> Ruta de archivos estáticos detectada: $webDirAbsPath")
   println(s"======================================================")
 
-  // 1. Servir archivos estáticos del frontend (carpeta 'web' en la raíz del proyecto)
-  @cask.staticFiles("/web")
-  def staticFiles() = webDirAbsPath
+  // 1. Servir archivos estáticos del frontend de forma robusta y personalizada (evita bugs de rutas en Linux)
+  @cask.get("/web", subpath = true)
+  def serveWebFiles(request: cask.Request) = {
+    val pathStr = request.remainingPath.mkString("/")
+    // Si la ruta está vacía (ej: /web/), redirigir o servir index.html
+    val targetPath = if (pathStr.trim.isEmpty) "index.html" else pathStr
+    val file = new java.io.File(webDirAbsPath, targetPath)
+
+    if (file.exists() && file.isFile) {
+      val bytes = java.nio.file.Files.readAllBytes(file.toPath)
+      val contentType = if (targetPath.endsWith(".html")) "text/html"
+                        else if (targetPath.endsWith(".css")) "text/css"
+                        else if (targetPath.endsWith(".js")) "application/javascript"
+                        else "application/octet-stream"
+      cask.Response(
+        data = bytes,
+        headers = Seq("Content-Type" -> contentType)
+      )
+    } else {
+      cask.Response(
+        data = s"Archivo no encontrado: $targetPath",
+        statusCode = 404
+      )
+    }
+  }
 
   // Redirigir la raíz al index de la web
   @cask.get("/")
